@@ -1,4 +1,7 @@
 // Please implement exercise logic here
+// GLOBAL VARIABLES
+let counter = 0;
+
 // Build stopwatch UI
 // Main container
 const mainContainer = document.createElement('div');
@@ -44,11 +47,46 @@ lapButton.classList.add('btn');
 lapButton.innerHTML = ('Lap');
 bottomContainer.appendChild(lapButton);
 
-// Add event listener for buttons
-// startButton.addEventListener('click', startTimer);
-// stopButton.addEventListener('click', stopTimer);
-// resetButton.addEventListener('click', resetTimer);
-// lapButton.addEventListener('click', lapTimer);
+// Function for timer display
+const convertTime = (value) => {
+  const sec = parseInt(value, 10); // convert value to number if it's string
+  let hours = Math.floor(sec / 3600); // get hours
+  let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
+  let seconds = sec - (hours * 3600) - (minutes * 60); //  get seconds
+  // add 0 if value < 10; Example: 2 => 02
+  if (hours < 10) { hours = `0${hours}`; }
+  if (minutes < 10) { minutes = `0${minutes}`; }
+  if (seconds < 10) { seconds = `0${seconds}`; }
+  return `${hours}:${minutes}:${seconds}`; // Return is HH : MM : SS
+};
 
-// Append UI
-document.body.appendChild(mainContainer);
+// Function for start button
+const startTimer = () => {
+  const ref = setInterval(() => {
+    display.innerHTML = convertTime(counter);
+    counter += 1;
+  }, 1000);
+};
+
+// Function for stop button
+// const stopTimer = () => {
+
+// };
+
+// Function for reset button
+
+// Function for lap button
+
+// INITIALIZE
+
+const main = () => {
+  document.body.appendChild(mainContainer);
+
+  // Add event listener for buttons
+  startButton.addEventListener('click', startTimer);
+  // stopButton.addEventListener('click', stopTimer);
+  // resetButton.addEventListener('click', resetTimer);
+  // lapButton.addEventListener('click', lapTimer);
+};
+
+main();

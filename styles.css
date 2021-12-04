@@ -6,11 +6,11 @@ top {
   background-color: blue;
 }
 
-.display {
+/* .display {
   width: 200px;
   height: 100px;
   margin-bottom: 80px;
-}
+} */
 
 .btn {
   margin-left: 20px;
@@ -22,7 +22,7 @@ top {
 
 .main {
   width: 430px;
-  height: 150px;
+  height: 80px;
   border: 2px solid black;
   border-radius: 10px;
   background-color: grey;
