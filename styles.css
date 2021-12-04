@@ -1,3 +1,29 @@
 body {
   background-color: pink;
 }
+
+top {
+  background-color: blue;
+}
+
+.display {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 80px;
+}
+
+.btn {
+  margin-left: 20px;
+  margin-top: 10px;
+  background-color: green;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.main {
+  width: 430px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: grey;
+}
