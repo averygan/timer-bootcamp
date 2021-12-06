@@ -3,7 +3,6 @@
 let counter = 0;
 
 // BUILD STOPWATCH UI
-/// //////////////////
 
 // Main container
 const mainContainer = document.createElement('div');
@@ -80,7 +79,6 @@ const startTimer = () => {
 // Function for lap button
 
 // INITIALIZE
-/// /////////
 
 const main = () => {
   document.body.appendChild(mainContainer);
